@@ -1,0 +1,5 @@
+// script to insert document in collection
+// with attribute name value "Holberton school"
+ db.school.insert({name: "Holberton school"})// script to insert document in collection
+// with attribute name value "Holberton school"
+ db.school.insert({name: "Holberton school"})
