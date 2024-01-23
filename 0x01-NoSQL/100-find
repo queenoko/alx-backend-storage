@@ -1,0 +1,4 @@
+// This script list all documents with name starting by Holberton in the collection school
+// database name will be passed as option of mongo command....
+
+db.school.find({ "name": {$regex: "^Holberton"} })
