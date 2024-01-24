@@ -72,13 +72,13 @@ def replay(func: Callable):
 
 class Cache():
     """
-    Store instance of Redis client as private variable _redis
-    Flush the instance using flushdb
+    Cache function Store instance of Redis client as private variable _redis
+    Flush the instance using flushdb..
     """
     def __init__(self):
         """
-        Prototype: def __init__(self):
-        Store instance of Redis client as private variable _redis
+        ...Prototype: def __init__(self):
+        Store instance of Redis client as private variable _redis...
         """
         self._redis = redis.Redis()
         self._redis.flushdb()
