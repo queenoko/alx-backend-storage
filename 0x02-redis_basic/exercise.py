@@ -87,7 +87,8 @@ class Cache():
     @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """
-        Store history of inputs and outputs for a particular function
+        This function stores history of inputs
+        and outputs for a particular function
         """
         gen = str(uuid.uuid4())
         self._redis.set(gen, data)
@@ -96,7 +97,7 @@ class Cache():
     def get(self, key: str,
             fn: Optional[Callable] = None) -> Union[str, bytes, int, float]:
         """
-        Convert data back to desired format
+        This function converts data back to desired format...
         """
         value = self._redis.get(key)
         return value if not fn else fn(value)
