@@ -29,14 +29,14 @@ def count_calls(method: Callable) -> Callable:
 
 def call_history(method: Callable) -> Callable:
     """
-    Prototype: def call_history(method: Callable) -> Callable:
-    Returns a Callable
+    ...Prototype: def call_history(method: Callable) -> Callable:
+    Returns a Callable function...
     """
     @wraps(method)
     def wrapper(self, *args, **kwds):
         """
-        Prototype: def wrapper(self, *args, **kwds):
-        Returns wrapper
+        ...wrapper Prototype: def wrapper(self, *args, **kwds):
+        Returns wrapper...
         """
         key_m = method.__qualname__
         inp_m = key_m + ':inputs'
