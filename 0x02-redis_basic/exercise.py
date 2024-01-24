@@ -52,7 +52,8 @@ def call_history(method: Callable) -> Callable:
 def replay(func: Callable):
     """
     Replay Prototype: def replay(func: Callable):
-    Displays history of calls of a particular replay function
+    Displays history of calls of a
+    particular replay function
     """
     r = redis.Redis()
     key_m = func.__qualname__
