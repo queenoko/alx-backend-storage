@@ -13,9 +13,10 @@ def track_get_page(fn: Callable) -> Callable:
     """
     @wraps(fn)
     def wrapper(url: str) -> str:
-        """ The func Wrapper that:
-            - checks whether url's data is cached
-            - tracks how many times get_page has been called
+        """
+        The func Wrapper that:
+        - checks whether url's data is cached
+        - tracks how many times get_page has been called
         """
         client = redis.Redis()
         client.incr(f'count:{url}')
